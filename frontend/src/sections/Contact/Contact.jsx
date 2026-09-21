@@ -1453,7 +1453,7 @@ import {
 } from "lucide-react";
 
 import "./Contact.css";
-import map from "../../assets/india_outline.svg";
+import map from "../../assets/India_outline.svg";
 
 
 /* =========================================================
