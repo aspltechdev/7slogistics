@@ -1,0 +1,617 @@
+/* =========================================================
+   INDUSTRIES SECTION
+========================================================= */
+
+.industries-section {
+  position: relative;
+
+  padding: 125px 0 115px;
+
+  overflow: hidden;
+
+  background: #07111f;
+
+  color: #ffffff;
+}
+
+.industries-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -220px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(249, 115, 22, 0.07);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.industries-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1240px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.industries-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.8fr);
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 65px;
+}
+
+.industries-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 19px;
+
+  color: #f97316;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.industries-eyebrow span {
+  width: 25px;
+  height: 2px;
+
+  background: #f97316;
+}
+
+.industries-header h2 {
+  max-width: 720px;
+
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(43px, 5vw, 68px);
+
+  font-weight: 800;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.055em;
+}
+
+.industries-header h2 span {
+  display: block;
+
+  color: #f97316;
+}
+
+.industries-header-right {
+  padding-bottom: 3px;
+}
+
+.industries-header-right p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+.industries-header-stat {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 25px;
+}
+
+.industries-header-stat strong {
+  color: #f97316;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+.industries-header-stat span {
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.industries-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.industry-card {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 410px;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  border-radius: 15px;
+
+  background: #0b1828;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(249, 115, 22, 0.28);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.industry-image {
+  position: relative;
+
+  height: 235px;
+
+  overflow: hidden;
+}
+
+.industry-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  opacity: 0.78;
+
+  filter: saturate(0.75);
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease,
+    filter 0.4s ease;
+}
+
+.industry-card:hover .industry-image img {
+  transform: scale(1.07);
+
+  opacity: 0.95;
+
+  filter: saturate(1);
+}
+
+.industry-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 13, 23, 0.05) 0%,
+      rgba(5, 13, 23, 0.12) 35%,
+      rgba(5, 13, 23, 0.9) 100%
+    );
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.industry-number {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.industry-icon {
+  position: absolute;
+
+  left: 18px;
+  bottom: 18px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(249, 115, 22, 0.25);
+
+  border-radius: 11px;
+
+  background: rgba(7, 17, 31, 0.75);
+
+  color: #f97316;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.industry-card:hover .industry-icon {
+  transform: translateY(-3px);
+
+  background: rgba(249, 115, 22, 0.15);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.industry-content {
+  padding: 20px 19px 21px;
+}
+
+.industry-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.industry-title-row h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.industry-arrow {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+.industry-card:hover .industry-arrow {
+  transform: translate(2px, -2px);
+
+  background: #f97316;
+
+  border-color: #f97316;
+
+  color: #ffffff;
+}
+
+.industry-content p {
+  max-width: 310px;
+
+  margin: 11px 0 0;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 10px;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   LINK
+========================================================= */
+
+.industry-link {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.industry-link > span:first-child {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.industry-link-line {
+  width: 25px;
+  height: 1px;
+
+  background: rgba(249, 115, 22, 0.5);
+}
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.industries-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 55px;
+
+  padding-top: 35px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.industries-bottom-copy {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.industries-bottom-copy span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.industries-bottom-copy strong {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.industries-cta {
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 9px 0 18px;
+
+  border-radius: 7px;
+
+  background: #f97316;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.industries-cta:hover {
+  transform: translateY(-3px);
+
+  background: #fb812d;
+}
+
+.industries-cta-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .industries-container {
+    width: min(100% - 50px, 950px);
+  }
+
+  .industries-header {
+    gap: 45px;
+  }
+
+  .industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   TABLET PORTRAIT
+========================================================= */
+
+@media (max-width: 750px) {
+  .industries-section {
+    padding: 90px 0;
+  }
+
+  .industries-header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+  }
+
+  .industries-header-right {
+    max-width: 560px;
+  }
+
+  .industries-header h2 {
+    font-size: clamp(42px, 8vw, 58px);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .industries-section {
+    padding: 75px 0;
+  }
+
+  .industries-container {
+    width: calc(100% - 32px);
+  }
+
+  .industries-eyebrow {
+    font-size: 8px;
+  }
+
+  .industries-header h2 {
+    font-size: clamp(38px, 11.5vw, 52px);
+  }
+
+  .industries-header-right p {
+    font-size: 11px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .industry-card {
+    min-height: 390px;
+  }
+
+  .industry-image {
+    height: 225px;
+  }
+
+  .industry-content {
+    padding: 18px;
+  }
+
+  .industry-title-row h3 {
+    font-size: 15px;
+  }
+
+  .industries-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 40px;
+
+    padding-top: 28px;
+  }
+
+  .industries-cta {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .industry-card {
+    min-height: 365px;
+  }
+
+  .industry-image {
+    height: 205px;
+  }
+
+  .industry-content p {
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,1429 @@
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section {
+  position: relative;
+
+  padding: 110px 0 90px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(249, 115, 22, 0.045),
+      transparent 30%
+    ),
+    #f7f9fb;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.contact-container {
+  width: min(
+    1280px,
+    calc(100% - 48px)
+  );
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  margin-bottom: 48px;
+}
+
+
+.contact-eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 17px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: #f97316;
+}
+
+
+.contact-eyebrow span {
+  width: 22px;
+  height: 1px;
+
+  background: #f97316;
+}
+
+
+.contact-heading h2 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size:
+    clamp(42px, 5vw, 66px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+
+  color: #0b1728;
+}
+
+
+.contact-heading h2 span {
+  display: inline;
+
+  color: #f97316;
+}
+
+
+.contact-heading > p {
+  width: 390px;
+
+  margin: 0 0 3px;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  color: #64748b;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.contact-main-card {
+  display: grid;
+
+  grid-template-columns:
+    0.82fr
+    1.18fr;
+
+  overflow: hidden;
+
+  min-height: 680px;
+
+  border: 1px solid #e1e7ec;
+
+  border-radius: 28px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px
+    rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   FORM AREA
+========================================================= */
+
+.contact-form-area {
+  padding: 42px 44px 45px;
+
+  border-right: 1px solid #e7edf1;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfcfd
+    );
+}
+
+
+.form-top {
+  margin-bottom: 30px;
+}
+
+
+.form-top > span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  color: #f97316;
+}
+
+
+.form-top p {
+  margin: 0;
+
+  font-size: 12px;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.contact-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.form-row {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+.form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.form-field label {
+  font-size: 9px;
+
+  font-weight: 700;
+
+  color: #334155;
+}
+
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+
+  outline: none;
+
+  border: 1px solid #dfe6ec;
+
+  border-radius: 11px;
+
+  background: #f9fafb;
+
+  color: #172033;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    0.25s ease;
+}
+
+
+.form-field input,
+.form-field select {
+  height: 48px;
+
+  padding: 0 14px;
+}
+
+
+.form-field textarea {
+  min-height: 128px;
+
+  padding: 13px 14px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a1adba;
+}
+
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #f97316;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(249, 115, 22, 0.07);
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.form-field select {
+  cursor: pointer;
+
+  appearance: none;
+
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      #94a3b8 50%
+    ),
+    linear-gradient(
+      135deg,
+      #94a3b8 50%,
+      transparent 50%
+    );
+
+  background-position:
+    calc(100% - 18px) 20px,
+    calc(100% - 13px) 20px;
+
+  background-size:
+    5px 5px,
+    5px 5px;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.contact-submit {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 4px;
+
+  padding:
+    0 7px 0 19px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #0b1728;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  transition:
+    0.25s ease;
+}
+
+
+.contact-submit:hover {
+  background: #16263b;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 15px 30px
+    rgba(11, 23, 40, 0.15);
+}
+
+
+.contact-submit-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+
+  background: #f97316;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.contact-submit:hover
+.contact-submit-icon {
+  transform:
+    translateX(2px);
+}
+
+
+/* =========================================================
+   NETWORK AREA
+========================================================= */
+
+.contact-network-area {
+  position: relative;
+
+  min-width: 0;
+
+  padding: 38px 38px 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9fbfc,
+      #f1f5f7
+    );
+}
+
+
+/* =========================================================
+   MAP HEADER
+========================================================= */
+
+.map-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 17px;
+}
+
+
+.map-header > div:first-child > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  color: #f97316;
+}
+
+
+.map-header h3 {
+  margin: 0;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 24px;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+
+  color: #172033;
+}
+
+
+.network-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 11px;
+
+  border: 1px solid #dce4ea;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.8);
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: .1em;
+
+  color: #64748b;
+
+  white-space: nowrap;
+}
+
+
+.network-status i {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(34,197,94,.1);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.india-network-map {
+  position: relative;
+
+  width: 100%;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  border: 1px solid #dce5ea;
+
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #f2f6f8 72%
+    );
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.map-grid {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: .5;
+
+  background-image:
+    linear-gradient(
+      rgba(148,163,184,.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(148,163,184,.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 36px 36px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+}
+
+
+/* =========================================================
+   INDIA OUTLINE
+========================================================= */
+
+.india-outline-wrapper {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 54%;
+  height: 94%;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+.india-outline {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  opacity: .78;
+
+  filter:
+    grayscale(1)
+    brightness(1.04)
+    contrast(.72);
+
+  mix-blend-mode: multiply;
+}
+
+
+/* =========================================================
+   INDIA SOFT GLOW
+========================================================= */
+
+.india-outline-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(249,115,22,.09),
+      transparent 68%
+    );
+
+  filter:
+    blur(25px);
+
+  z-index: -1;
+}
+
+
+/* =========================================================
+   ROUTES
+========================================================= */
+
+.network-routes {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+
+.network-route {
+  fill: none;
+
+  stroke-width: .42;
+
+  stroke-linecap: round;
+
+  stroke-dasharray:
+    1.2 1.7;
+
+  opacity: .85;
+
+  animation:
+    routeMove 7s linear infinite;
+}
+
+
+.route-orange {
+  stroke: #f97316;
+}
+
+
+.route-blue {
+  stroke: #5793dc;
+}
+
+
+.route-grey {
+  stroke: #9baebe;
+}
+
+
+@keyframes routeMove {
+
+  from {
+    stroke-dashoffset: 25;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+/* =========================================================
+   CITY
+========================================================= */
+
+.network-city {
+  position: absolute;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  transform:
+    translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CITY DOT
+========================================================= */
+
+.network-city-dot {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 15px;
+  height: 15px;
+
+  border:
+    2px solid #f97316;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(249,115,22,.08);
+}
+
+
+.network-city-dot span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #f97316;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.network-city-label {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+
+  padding:
+    6px 8px;
+
+  border:
+    1px solid #e1e8ed;
+
+  border-radius: 7px;
+
+  background:
+    rgba(255,255,255,.92);
+
+  box-shadow:
+    0 7px 18px
+    rgba(15,23,42,.07);
+
+  backdrop-filter:
+    blur(8px);
+
+  white-space: nowrap;
+}
+
+
+.network-city-label strong {
+  font-family: "Manrope", sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  color: #172033;
+}
+
+
+.network-city-label small {
+  font-size: 5px;
+
+  font-weight: 800;
+
+  letter-spacing: .1em;
+
+  color: #94a3b8;
+}
+
+
+/* =========================================================
+   FEATURED HEAD OFFICE
+========================================================= */
+
+.featured-city {
+  z-index: 20;
+}
+
+
+.featured-city
+.network-city-dot {
+  width: 20px;
+  height: 20px;
+
+  border-color:
+    #f97316;
+
+  box-shadow:
+    0 0 0 5px
+    rgba(249,115,22,.12),
+    0 0 25px
+    rgba(249,115,22,.22);
+}
+
+
+.featured-city
+.network-city-dot span {
+  width: 7px;
+  height: 7px;
+}
+
+
+.featured-city
+.network-city-label {
+  border-color:
+    rgba(249,115,22,.25);
+
+  background:
+    rgba(255,248,242,.96);
+}
+
+
+.featured-city
+.network-city-label strong {
+  color: #c2410c;
+}
+
+
+/* =========================================================
+   VEHICLES
+========================================================= */
+
+.map-vehicle {
+  position: absolute;
+
+  z-index: 15;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid #e1e8ed;
+
+  border-radius: 10px;
+
+  background:
+    rgba(255,255,255,.94);
+
+  box-shadow:
+    0 10px 25px
+    rgba(15,23,42,.1);
+
+  color: #f97316;
+
+  animation:
+    vehicleFloat 3s ease-in-out infinite;
+}
+
+
+.map-truck {
+  left: 31%;
+  top: 51%;
+}
+
+
+.map-train {
+  left: 48%;
+  top: 66%;
+
+  color: #64748b;
+
+  animation-delay:
+    .8s;
+}
+
+
+.map-plane {
+  right: 17%;
+  top: 25%;
+
+  color: #3b82f6;
+
+  animation-delay:
+    1.4s;
+}
+
+
+@keyframes vehicleFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-5px);
+  }
+
+}
+
+
+/* =========================================================
+   LEGEND
+========================================================= */
+
+.map-legend {
+  position: absolute;
+
+  left: 18px;
+  bottom: 17px;
+
+  z-index: 30;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    9px 11px;
+
+  border:
+    1px solid #e0e7ec;
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,.94);
+
+  box-shadow:
+    0 8px 20px
+    rgba(15,23,42,.06);
+
+  font-size: 6px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  color: #64748b;
+}
+
+
+.map-legend > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+
+.legend-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+}
+
+
+.legend-dot.orange {
+  background: #f97316;
+}
+
+
+.legend-dot.grey {
+  background: #9baebe;
+}
+
+
+.legend-dot.blue {
+  background: #5793dc;
+}
+
+
+/* =========================================================
+   NETWORK BADGE
+========================================================= */
+
+.network-badge {
+  position: absolute;
+
+  right: 18px;
+  bottom: 17px;
+
+  z-index: 30;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    9px 11px;
+
+  border:
+    1px solid #e0e7ec;
+
+  border-radius: 9px;
+
+  background:
+    rgba(255,255,255,.94);
+
+  box-shadow:
+    0 8px 20px
+    rgba(15,23,42,.06);
+
+  font-size: 6px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+
+  color: #64748b;
+}
+
+
+.network-badge > span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(34,197,94,.1);
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+
+.contact-info-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+
+  padding:
+    12px 13px;
+
+  border:
+    1px solid #dde6eb;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.88);
+
+  transition:
+    .25s ease;
+}
+
+
+.contact-info-item:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(249,115,22,.25);
+
+  box-shadow:
+    0 10px 25px
+    rgba(15,23,42,.06);
+}
+
+
+.contact-info-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(249,115,22,.08);
+
+  color: #f97316;
+}
+
+
+.contact-info-item span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-size: 6px;
+
+  font-weight: 800;
+
+  letter-spacing: .12em;
+
+  color: #94a3b8;
+}
+
+
+.contact-info-item strong {
+  display: block;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 9px;
+
+  color: #172033;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .contact-main-card {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .contact-form-area {
+    border-right: none;
+
+    border-bottom:
+      1px solid #e7edf1;
+  }
+
+
+  .india-network-map {
+    height: 560px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .contact-section {
+    padding:
+      80px 0 60px;
+  }
+
+
+  .contact-container {
+    width:
+      calc(100% - 30px);
+  }
+
+
+  .contact-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  .contact-heading h2 {
+    font-size: 43px;
+  }
+
+
+  .contact-heading > p {
+    width: 100%;
+
+    max-width: 600px;
+  }
+
+
+  .contact-form-area {
+    padding:
+      30px 22px;
+  }
+
+
+  .contact-network-area {
+    padding:
+      28px 18px 22px;
+  }
+
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+
+  .map-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+
+  .india-network-map {
+    height: 510px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+  .contact-heading h2 {
+    font-size: 36px;
+  }
+
+
+  .contact-main-card {
+    border-radius: 20px;
+  }
+
+
+  .contact-form-area {
+    padding:
+      25px 17px;
+  }
+
+
+  .contact-network-area {
+    padding:
+      23px 12px 16px;
+  }
+
+
+  .map-header h3 {
+    font-size: 21px;
+  }
+
+
+  .network-status {
+    font-size: 6px;
+  }
+
+
+  .india-network-map {
+    height: 440px;
+
+    border-radius: 16px;
+  }
+
+
+  .india-outline-wrapper {
+    width: 67%;
+    height: 94%;
+  }
+
+
+  .network-city-label {
+    padding:
+      5px 6px;
+  }
+
+
+  .network-city-label strong {
+    font-size: 7px;
+  }
+
+
+  .network-city-label small {
+    font-size: 4px;
+  }
+
+
+  .network-city-dot {
+    width: 11px;
+    height: 11px;
+  }
+
+
+  .network-city-dot span {
+    width: 4px;
+    height: 4px;
+  }
+
+
+  .featured-city
+  .network-city-dot {
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .featured-city
+  .network-city-dot span {
+    width: 5px;
+    height: 5px;
+  }
+
+
+  .map-vehicle {
+    width: 29px;
+    height: 29px;
+  }
+
+
+  .map-legend {
+    left: 8px;
+    bottom: 8px;
+
+    gap: 7px;
+
+    padding:
+      7px 8px;
+  }
+
+
+  .network-badge {
+    right: 8px;
+    bottom: 8px;
+
+    padding:
+      7px 8px;
+  }
+
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .network-route,
+  .map-vehicle {
+    animation: none;
+  }
+
+  .contact-submit,
+  .contact-info-item {
+    transition: none;
+  }
+
+}
