@@ -1460,179 +1460,44 @@ import map from "../../assets/India_outline.svg";
    NETWORK CITIES
 ========================================================= */
 
+// Coordinates are relative to India_outline.svg's 666.66669 × 777.33331
+// viewBox. Outline, routes and markers share this coordinate system.
 const cities = [
-  {
-    name: "Delhi",
-    type: "NETWORK",
-    x: 48,
-    y: 13,
-  },
-  {
-    name: "Jaipur",
-    type: "NETWORK",
-    x: 38,
-    y: 23,
-  },
-  {
-    name: "Ahmedabad",
-    type: "NETWORK",
-    x: 28,
-    y: 37,
-  },
-  {
-    name: "Mumbai",
-    type: "NETWORK",
-    x: 29,
-    y: 52,
-  },
-  {
-    name: "Pune",
-    type: "NETWORK",
-    x: 35,
-    y: 57,
-  },
-  {
-    name: "Nagpur",
-    type: "NETWORK",
-    x: 53,
-    y: 43,
-  },
-  {
-    name: "Kolkata",
-    type: "NETWORK",
-    x: 77,
-    y: 37,
-  },
-  {
-    name: "Hyderabad",
-    type: "NETWORK",
-    x: 55,
-    y: 56,
-  },
-  {
-    name: "Bengaluru",
-    type: "NETWORK",
-    x: 49,
-    y: 75,
-  },
-  {
-    name: "Chennai",
-    type: "NETWORK",
-    x: 59,
-    y: 72,
-  },
-  {
-    name: "Puducherry",
-    type: "HEAD OFFICE",
-    x: 54,
-    y: 78,
-    featured: true,
-  },
-  {
-    name: "Kochi",
-    type: "NETWORK",
-    x: 34,
-    y: 88,
-  },
+  { name: "Delhi", x: 236, y: 233, dx: 22, dy: -26 },
+  { name: "Jaipur", x: 187, y: 283, dx: -167, dy: -26 },
+  { name: "Ahmedabad", x: 111, y: 358, dx: -200, dy: -48 },
+  { name: "Mumbai", x: 118, y: 450, dx: -167, dy: -50 },
+  { name: "Pune", x: 140, y: 468, dx: -167, dy: 12 },
+  { name: "Nagpur", x: 285, y: 405, dx: 22, dy: -26 },
+  { name: "Kolkata", x: 467, y: 378, dx: 22, dy: -26 },
+  { name: "Hyderabad", x: 260, y: 501, dx: 22, dy: -26 },
+  { name: "Bengaluru", x: 230, y: 606, dx: -200, dy: -42 },
+  { name: "Chennai", x: 293, y: 609, dx: 26, dy: -55 },
+  { name: "Puducherry", x: 286, y: 641, dx: 26, dy: 6, featured: true },
+  { name: "Kochi", x: 203, y: 679, dx: -167, dy: 4 },
 ];
 
-
-/* =========================================================
-   ROUTES
-========================================================= */
-
+const citiesByName = Object.fromEntries(cities.map(city => [city.name, city]));
 const routes = [
-  {
-    from: [48, 13],
-    to: [38, 23],
-    color: "blue",
-    curve: -3,
-  },
-
-  {
-    from: [38, 23],
-    to: [28, 37],
-    color: "blue",
-    curve: 2,
-  },
-
-  {
-    from: [28, 37],
-    to: [29, 52],
-    color: "orange",
-    curve: -2,
-  },
-
-  {
-    from: [29, 52],
-    to: [35, 57],
-    color: "orange",
-    curve: 1,
-  },
-
-  {
-    from: [35, 57],
-    to: [53, 43],
-    color: "grey",
-    curve: -5,
-  },
-
-  {
-    from: [53, 43],
-    to: [77, 37],
-    color: "blue",
-    curve: -4,
-  },
-
-  {
-    from: [53, 43],
-    to: [55, 56],
-    color: "orange",
-    curve: 2,
-  },
-
-  {
-    from: [55, 56],
-    to: [49, 75],
-    color: "blue",
-    curve: -3,
-  },
-
-  {
-    from: [49, 75],
-    to: [54, 78],
-    color: "orange",
-    curve: 1,
-  },
-
-  {
-    from: [54, 78],
-    to: [59, 72],
-    color: "grey",
-    curve: 2,
-  },
-
-  {
-    from: [49, 75],
-    to: [34, 88],
-    color: "blue",
-    curve: 4,
-  },
-
-  {
-    from: [28, 52],
-    to: [54, 78],
-    color: "orange",
-    curve: 8,
-  },
-
-  {
-    from: [48, 13],
-    to: [77, 37],
-    color: "grey",
-    curve: 8,
-  },
-];
+  ["Delhi", "Jaipur", "blue", -12],
+  ["Jaipur", "Ahmedabad", "blue", 10],
+  ["Ahmedabad", "Mumbai", "orange", -10],
+  ["Mumbai", "Pune", "orange", 5],
+  ["Pune", "Nagpur", "grey", -25],
+  ["Nagpur", "Kolkata", "blue", -20],
+  ["Nagpur", "Hyderabad", "orange", 10],
+  ["Hyderabad", "Bengaluru", "blue", -15],
+  ["Bengaluru", "Puducherry", "orange", 5],
+  ["Puducherry", "Chennai", "grey", 10],
+  ["Bengaluru", "Kochi", "blue", 20],
+  ["Mumbai", "Puducherry", "orange", 40],
+  ["Delhi", "Kolkata", "grey", 40],
+].map(([from, to, color, curve]) => ({
+  from: [citiesByName[from].x, citiesByName[from].y],
+  to: [citiesByName[to].x, citiesByName[to].y],
+  color,
+  curve,
+}));
 
 
 /* =========================================================
@@ -2000,137 +1865,56 @@ function Contact() {
                   INDIA OUTLINE
               ================================================= */}
 
-              <div className="india-outline-wrapper">
-
-                {/* <img
-                  src="/maps/india-outline.svg"
-                  alt="India logistics network"
-                  className="india-outline"
-                /> */}
-<img
-  src={map}
-  alt="India logistics network"
-  className="india-outline"
-/>
-              </div>
-
-
-              {/* =================================================
-                  ROUTES
-              ================================================= */}
-
               <svg
-                className="network-routes"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                aria-hidden="true"
+                viewBox="-35 0 736.66669 777.33331"
+                preserveAspectRatio="xMidYMid meet"
+                role="img"
+                aria-labelledby="contact-map-title"
+                style={{ position: "absolute", inset: "3% 5% 9%", width: "90%", height: "88%", zIndex: 5, overflow: "visible" }}
               >
-
-                <defs>
-
-                  <filter
-                    id="routeGlow"
-                    x="-30%"
-                    y="-30%"
-                    width="160%"
-                    height="160%"
-                  >
-
-                    <feGaussianBlur
-                      stdDeviation="0.7"
-                      result="blur"
-                    />
-
-                    <feMerge>
-
-                      <feMergeNode in="blur" />
-
-                      <feMergeNode in="SourceGraphic" />
-
-                    </feMerge>
-
-                  </filter>
-
-                </defs>
-
-
-                {routes.map(
-                  (route, index) => (
-
+                <title id="contact-map-title">India logistics network: Delhi, Jaipur, Ahmedabad, Mumbai, Pune, Nagpur, Kolkata, Hyderabad, Bengaluru, Chennai, Puducherry and Kochi</title>
+                <image href={map} x="0" y="0" width="666.66669" height="777.33331" opacity="0.78" />
+                <g aria-hidden="true">
+                  {routes.map((route, index) => (
                     <path
                       key={index}
-                      d={createCurve(
-                        route.from,
-                        route.to,
-                        route.curve
-                      )}
+                      d={createCurve(route.from, route.to, route.curve)}
                       className={`network-route route-${route.color}`}
-                      filter="url(#routeGlow)"
+                      style={{ strokeWidth: 2, strokeDasharray: "7 10" }}
                     />
-
-                  )
-                )}
-
+                  ))}
+                </g>
+                {cities.map((city) => {
+                  const labelWidth = city.name === "Ahmedabad" || city.name === "Puducherry" || city.name === "Bengaluru" ? 180 : 145;
+                  return (
+                    <g key={city.name} transform={`translate(${city.x} ${city.y})`}>
+                      <title>{city.name}{city.featured ? " — Head office" : " — Network"}</title>
+                      <circle r={city.featured ? 22 : 18} fill="#f97316" opacity="0.1" />
+                      <circle r={city.featured ? 14 : 11} fill="white" stroke="#f97316" strokeWidth="2.5" />
+                      <circle r={city.featured ? 5.5 : 4.5} fill="#f97316" />
+                      <g transform={`translate(${city.dx} ${city.dy})`}>
+                        <rect width={labelWidth} height="52" rx="8" fill="white" fillOpacity="0.96" stroke={city.featured ? "#fdba74" : "#dce5ea"} />
+                        <text x="12" y="23" fill={city.featured ? "#ea580c" : "#172033"} fontFamily="Manrope, sans-serif" fontSize="20" fontWeight="700">{city.name}</text>
+                        <text x="12" y="41" fill="#64748b" fontFamily="Manrope, sans-serif" fontSize="10" letterSpacing="0.6">{city.featured ? "HEAD OFFICE" : "NETWORK"}</text>
+                      </g>
+                    </g>
+                  );
+                })}
               </svg>
-
-
-              {/* =================================================
-                  CITY POINTS
-              ================================================= */}
-
-              {cities.map(
-                (city) => (
-
-                  <div
-                    key={city.name}
-                    className={`network-city ${
-                      city.featured
-                        ? "featured-city"
-                        : ""
-                    }`}
-                    style={{
-                      left: `${city.x}%`,
-                      top: `${city.y}%`,
-                    }}
-                  >
-
-                    <div className="network-city-dot">
-
-                      <span></span>
-
-                    </div>
-
-
-                    <div className="network-city-label">
-
-                      <strong>
-                        {city.name}
-                      </strong>
-
-                      <small>
-                        {city.type}
-                      </small>
-
-                    </div>
-
-                  </div>
-
-                )
-              )}
 
 
               {/* =================================================
                   VEHICLES
               ================================================= */}
 
-              <div className="map-vehicle map-truck">
+              <div className="map-vehicle map-truck" style={{ left: "15%", top: "60%", zIndex: 4 }}>
 
                 <Truck size={16} />
 
               </div>
 
 
-              <div className="map-vehicle map-train">
+              <div className="map-vehicle map-train" style={{ left: "70%", top: "78%", zIndex: 4 }}>
 
                 <TrainFront size={16} />
 
