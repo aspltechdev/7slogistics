@@ -105,15 +105,16 @@ function About() {
           </h2>
 
           <p className="about-intro">
-            Logistics is more than moving a package from one place to another.
-            It is about creating a dependable connection between businesses,
-            people and opportunities.
+            7 STAR LOGISTICS provides integrated logistics and supply-chain support for manufacturers, 
+            distributors and corporate customers. The company’s service scope covers warehouse operations, 
+            transportation, distribution, dispatch coordination and workforce support.
           </p>
 
           <p className="about-description">
-            7 Star Logistics brings together surface, air and rail
-            transportation solutions to help businesses move shipments with
-            greater visibility, flexibility and confidence.
+            Our company was founded with the mission of providing reliable, 
+            transparent, and cost-effective logistics solutions to support daily operations 
+            and long-term business growth. With a dedicated operations team, organised processes, 
+            and a customer-first approach, we ensure timely deliveries and smooth coordination at every level.
           </p>
 
           {/* HIGHLIGHTS */}
